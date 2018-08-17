@@ -1,5 +1,6 @@
 package com.test;
 
+import com.alibaba.fastjson.JSON;
 import com.kuanquan.QueryUserDaoInvoke;
 import com.kuanquan.User;
 import org.apache.ibatis.session.SqlSession;
@@ -43,7 +44,8 @@ public class DemoTest {
 
         //执行查询返回一个唯一user对象的sql
         List<User> lists = userMapper.findUserById("Sam");
-        System.out.println(lists.size());
+
+        System.out.println(JSON.toJSONString(lists));
 
         session.close();
     }
