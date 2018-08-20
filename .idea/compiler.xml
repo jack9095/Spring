@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="basice" />
         <module name="mybatis" />
         <module name="springMVC" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="basice" target="1.5" />
       <module name="mybatis" target="1.7" />
       <module name="SpringMVC" target="1.5" />
       <module name="springMVC" target="1.5" />
