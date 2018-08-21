@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 参考资料：https://www.cnblogs.com/gczmn/p/8671554.html
  *
  * mac下Tomcat的玩法：https://blog.csdn.net/yxys01/article/details/77715330
  */
@@ -30,7 +29,7 @@ public class PersonController {
         request.setCharacterEncoding("utf-8");
 
         long personId = Long.parseLong(request.getParameter("id"));
-        Person person =personService.findPersonById(personId);
+        Person person = personService.findPersonById(personId);
 
         ObjectMapper mapper = new ObjectMapper();
 
