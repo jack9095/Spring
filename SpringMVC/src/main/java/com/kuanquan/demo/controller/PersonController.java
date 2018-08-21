@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,11 +24,10 @@ public class PersonController {
 
     @Autowired
     private PersonService personService;
-    @RequestMapping("/selectPerson")
+    @RequestMapping(value = "/selectPerson",method = RequestMethod.GET)
     public void selectPerson(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         request.setCharacterEncoding("utf-8");
-//        response.setCharacterEncoding("utf-8");
 
         long personId = Long.parseLong(request.getParameter("id"));
         Person person =personService.findPersonById(personId);
