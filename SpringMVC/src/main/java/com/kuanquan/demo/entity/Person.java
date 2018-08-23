@@ -1,5 +1,9 @@
 package com.kuanquan.demo.entity;
 
+
+/**
+ * 数据库表中字段的映射
+ */
 public class Person {
 
    private int user_id;

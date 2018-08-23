@@ -28,14 +28,16 @@ public class PersonController {
     public void selectPerson(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         request.setCharacterEncoding("utf-8");
-
+        response.setHeader("content-type", "text/html;charset=UTF-8");
         long personId = Long.parseLong(request.getParameter("id"));
         Person person = personService.findPersonById(personId);
 
-        System.out.println(JSON.toJSONString(person));
+        String s = JSON.toJSONString(person);
+        System.out.println(s);
         ObjectMapper mapper = new ObjectMapper();
 
-        response.getWriter().write(mapper.writeValueAsString(person));
+//        response.getWriter().write(mapper.writeValueAsString(person));
+        response.getWriter().write(s);
         response.getWriter().close();
     }
 }
