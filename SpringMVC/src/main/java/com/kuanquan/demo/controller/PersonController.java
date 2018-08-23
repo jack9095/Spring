@@ -1,5 +1,6 @@
 package com.kuanquan.demo.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.kuanquan.demo.entity.Person;
 import com.kuanquan.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,7 @@ public class PersonController {
         long personId = Long.parseLong(request.getParameter("id"));
         Person person = personService.findPersonById(personId);
 
+        System.out.println(JSON.toJSONString(person));
         ObjectMapper mapper = new ObjectMapper();
 
         response.getWriter().write(mapper.writeValueAsString(person));

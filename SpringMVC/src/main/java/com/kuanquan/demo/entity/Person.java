@@ -2,17 +2,19 @@ package com.kuanquan.demo.entity;
 
 public class Person {
 
-    private long id;
-    private String name;
-    private String email;
-    private int status;
+   private int user_id;
+   private String name;
+   private int age;
+   private int sex;
+   private String create_time;
+   private String _timestamp;
 
-    public long getId() {
-        return id;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public String getName() {
@@ -23,25 +25,47 @@ public class Person {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public int getAge() {
+        return age;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public int getStatus() {
-        return status;
+    public int getSex() {
+        return sex;
     }
 
-    public void setStatus(int status) {
-        this.status = status;
+    public void setSex(int sex) {
+        this.sex = sex;
+    }
+
+    public String getCreate_time() {
+        return create_time;
+    }
+
+    public void setCreate_time(String create_time) {
+        this.create_time = create_time;
+    }
+
+    public String get_timestamp() {
+        return _timestamp;
+    }
+
+    public void set_timestamp(String _timestamp) {
+        this._timestamp = _timestamp;
     }
 
     @Override
-    public String toString(){
-        return this.getId()+"---"+this.getName()+"---"+
-                this.getEmail()+"---"+this.getStatus();
+    public String toString() {
+        return "Person{" +
+                "user_id=" + user_id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", sex=" + sex +
+                ", create_time='" + create_time + '\'' +
+                ", _timestamp='" + _timestamp + '\'' +
+                '}';
     }
 }
