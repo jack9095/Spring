@@ -3,21 +3,23 @@ package com.kuanquan.demo.entity;
 
 /**
  * 数据库表中字段的映射
+ * 类名一般都是用表明命名的，好区分
  */
 public class Person {
 
-   private int user_id;
+    // 下面都是数据库表中每一列字段
+   private long user_id;
    private String name;
    private int age;
    private int sex;
    private String create_time;
    private String _timestamp;
 
-    public int getUser_id() {
+    public long getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(int user_id) {
+    public void setUser_id(long user_id) {
         this.user_id = user_id;
     }
 

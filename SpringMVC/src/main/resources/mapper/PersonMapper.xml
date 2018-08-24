@@ -8,4 +8,21 @@
         SELECT * FROM user WHERE user_id = #{id}
     </select>
 
+    <select id="findPersonName" resultType="String" parameterType="long">
+        SELECT name FROM user WHERE user_id = #{id}
+    </select>
+
+    <delete id="deletePerson" parameterType="long" >
+        DELETE FROM user WHERE user_id = #{id}
+    </delete>
+
+    <!--更新单条记录-->
+    <update id="updataPerson" parameterType="com.kuanquan.demo.entity.Person">
+        UPDATE user SET name = #{name} WHERE user_id = #{user_id}
+    </update>
+
+    <!--插入一条记录-->
+    <insert id="insertPerson" parameterType="com.kuanquan.demo.entity.Person">
+        INSERT INTO user VALUES (user_id,name,age,sex,create_time,_timestamp)
+    </insert>
 </mapper>
