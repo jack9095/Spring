@@ -118,6 +118,7 @@ public class PersonController {
      * 新增一条记录
      * @param request
      * @param response
+     * INSERT INTO user VALUES (user_id,name,age,sex,create_time,_timestamp)
      * @throws IOException
      */
     @RequestMapping(value = "/insertPerson",method = RequestMethod.GET)
@@ -128,10 +129,10 @@ public class PersonController {
         long personId = Long.parseLong(request.getParameter("id"));
 
         Person person = new Person();
-        person.setUser_id(4);
+        person.setUser_id(personId);
         person.setName("北京");
-        person.set_timestamp("2018");
-        person.setCreate_time("2014");
+        person.set_timestamp("2018-08-24 14:44:14");
+        person.setCreate_time("2014-05-27 18:12:59");
         person.setAge(101);
         person.setSex(0);
         personService.insertPerson(person);

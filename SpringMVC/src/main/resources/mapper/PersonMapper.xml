@@ -23,6 +23,6 @@
 
     <!--插入一条记录-->
     <insert id="insertPerson" parameterType="com.kuanquan.demo.entity.Person">
-        INSERT INTO user VALUES (user_id,name,age,sex,create_time,_timestamp)
+        insert into user(user_id,name,age,sex,create_time,_timestamp) values(#{user_id},#{name},#{age},#{sex},#{create_time},#{_timestamp})
     </insert>
 </mapper>
