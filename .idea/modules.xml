@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/basice/basice.iml" filepath="$PROJECT_DIR$/basice/basice.iml" />
-      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis_generator/mybatis_generator.iml" filepath="$PROJECT_DIR$/mybatis_generator/mybatis_generator.iml" />
     </modules>
   </component>
 </project>
