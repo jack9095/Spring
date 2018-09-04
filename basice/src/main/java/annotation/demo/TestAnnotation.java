@@ -22,6 +22,7 @@ public class TestAnnotation {
             annotation = stu.getAnnotations();//获取注解接口中的
             for (Annotation a : annotation) {
                 MyAnnotation my = (MyAnnotation) a;//强制转换成MyAnnotation类型
+                System.out.println("****************  fly ***************8");
                 System.out.println(stu + ":\n" + my.name() + " des: " + my.desc() + " my age: " + my.age());
             }
         }

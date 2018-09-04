@@ -1,4 +1,4 @@
-package annotation;
+package annotation.test;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -13,7 +13,7 @@ public class DemoAnnotation {
     public static void main(String[] args) {
         //1.使用类加载器加载类
         try {
-            Class<?> mClass = Class.forName("annotation.PersonAnnotation");
+            Class<?> mClass = Class.forName("annotation.test.PersonAnnotation");
             //2.找到类上面的注解
             boolean isExist = mClass.isAnnotationPresent(Despring.class);
             if (isExist) {

@@ -9,6 +9,7 @@
         <module name="basice" />
         <module name="mybatis" />
         <module name="mybatis_generator" />
+        <module name="OnlineRetailers" />
         <module name="SpringMVC" />
       </profile>
     </annotationProcessing>
@@ -17,6 +18,7 @@
       <module name="demo" target="1.7" />
       <module name="mybatis" target="1.7" />
       <module name="mybatis_generator" target="1.7" />
+      <module name="OnlineRetailers" target="1.7" />
       <module name="SpringMVC" target="1.7" />
       <module name="springMVC" target="1.5" />
       <module name="test" target="1.5" />
