@@ -6,6 +6,7 @@ import com.kuanquan.demo.common.ResponseCode;
 import com.kuanquan.demo.common.ServerResponse;
 import com.kuanquan.demo.entity.Person;
 import com.kuanquan.demo.service.PersonService;
+import com.kuanquan.demo.util.PropertiesUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +50,8 @@ public class PersonControllerNew {
 
         String s = JSON.toJSONString(person);
         log.error("打印数据 = " + s);
+        String property = PropertiesUtil.getProperty("password.salt");
+        System.out.println("property = " + property);
         return ServerResponse.createBySuccess("成功获取到",person);
     }
 }

@@ -181,6 +181,41 @@
             <version>2.8.2</version>
         </dependency>
 
+        <!--AOP框架-->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.7.3</version>
+        </dependency>
+
+        <!--里面包含一个日志的封装-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
+        <!--文件上传-->
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
+        <!--String工具类-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
+        <!--日期时间 转换工具-->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
     </dependencies>
 
     <build>

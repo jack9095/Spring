@@ -1,4 +1,4 @@
-package java.com.mmall.common;
+package com.kuanquan.demo.common;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
@@ -9,11 +9,11 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by geely
+ * 简单缓存
  */
-public class TokenCache {
+public class FCache {
 
-    private static Logger logger = LoggerFactory.getLogger(TokenCache.class);
+    private static Logger logger = LoggerFactory.getLogger(FCache.class);
 
     public static final String TOKEN_PREFIX = "token_";
 
@@ -40,6 +40,11 @@ public class TokenCache {
         localCache.put(key,value);
     }
 
+    /**
+     * 从缓存中获取值
+     * @param key
+     * @return
+     */
     public static String getKey(String key){
         String value = null;
         try {
