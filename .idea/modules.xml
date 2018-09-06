@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/basice/basice.iml" filepath="$PROJECT_DIR$/basice/basice.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis_generator/mybatis_generator.iml" filepath="$PROJECT_DIR$/mybatis_generator/mybatis_generator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../nguSeckill-master/nguSeckill.iml" filepath="$PROJECT_DIR$/../nguSeckill-master/nguSeckill.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
     </modules>
   </component>

@@ -9,7 +9,6 @@
         <module name="basice" />
         <module name="mybatis" />
         <module name="mybatis_generator" />
-        <module name="nguSeckill" />
         <module name="OnlineRetailers" />
         <module name="redis" />
         <module name="SpringMVC" />
