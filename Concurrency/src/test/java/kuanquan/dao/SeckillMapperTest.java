@@ -24,10 +24,10 @@ public class SeckillMapperTest {
 
     @Test
     public void reduceNumber() throws Exception {
-        long seckillId = 1000;
+        long seckillId = 1014;
         Date date = new Date();
         int i = seckillMapper.reduceNumber(seckillId, date);
-        System.out.println(i);
+        System.out.println(" 秒杀结果 =  " + i);
     }
 
     @Test
@@ -41,7 +41,7 @@ public class SeckillMapperTest {
     public void queryAll() throws Exception {
         List<Seckill> seckills = seckillMapper.queryAll(0, 100);
         for (Seckill seckill : seckills) {
-            System.out.print(seckill.toString());
+//            System.out.print(seckill.toString());
         }
     }
 

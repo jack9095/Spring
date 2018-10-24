@@ -41,7 +41,7 @@
         LIMIT #{offset}, #{limit}
     </select>
 
-    <!--调用储存过程-->
+    <!--调用储存过程   存储过程的作用：用数据库来处理逻辑  -->
     <select id="killByProcedure" statementType="CALLABLE">
         CALL execute_seckill(
         #{seckillId,jdbcType=BIGINT,mode=IN},

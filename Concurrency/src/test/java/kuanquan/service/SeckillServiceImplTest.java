@@ -34,21 +34,21 @@ public class SeckillServiceImplTest {
         System.out.println(seckillList.toString()); 
     }
 
-    @Test
+//    @Test
     public void getById() throws Exception {
         long seckillId = 1000;
         Seckill byId = seckillService.getById(seckillId);
         System.out.print(byId.toString());
     }
 
-    @Test
+//    @Test
     public void exportSeckillUrl() throws Exception {
         long seckillId = 1000;
         Exposer exposer = seckillService.exportSeckillUrl(seckillId);
         System.out.println(exposer.toString());
     }
 
-    @Test
+//    @Test
     public void executeSeckill() throws Exception {
         long seckillId = 1000;
         Exposer exposer = seckillService.exportSeckillUrl(seckillId);
@@ -67,7 +67,7 @@ public class SeckillServiceImplTest {
         }
     }
 
-    @Test
+//    @Test
     public void executeSeckillProcedureTest() {
         long seckillId = 1001;
         long phone = 13680115102L;
