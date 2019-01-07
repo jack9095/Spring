@@ -1,25 +1,22 @@
-package com.kuanquan.demo.entity;
+package com.ssm.demo.entity;
 
+public class User {
 
-/**
- * 数据库表中字段的映射
- * 类名一般都是用表明命名的，好区分
- */
-public class Person {
+    private int user_id;
+    private String name;
+    private int age;
+    private int sex;
+    private String create_time;
+    private String _timestamp;
 
-    // 下面都是数据库表中每一列字段
-   private long user_id;
-   private String name;
-   private int age;
-   private int sex;
-   private String create_time;
-   private String _timestamp;
+    public User() {
+    }
 
-    public long getUser_id() {
+    public int getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(long user_id) {
+    public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
 
@@ -65,7 +62,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "User{" +
                 "user_id=" + user_id +
                 ", name='" + name + '\'' +
                 ", age=" + age +

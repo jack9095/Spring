@@ -1,10 +1,8 @@
 package com.kuanquan.demo.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kuanquan.demo.common.ResponseCode;
 import com.kuanquan.demo.common.ServerResponse;
-import com.kuanquan.demo.entity.Person;
+import com.kuanquan.demo.entity.User;
 import com.kuanquan.demo.service.PersonService;
 import com.kuanquan.demo.util.PropertiesUtil;
 import org.apache.commons.logging.Log;
@@ -16,9 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
@@ -46,7 +41,7 @@ public class PersonControllerNew {
     @RequestMapping(value = "/selectPersonNew",method = RequestMethod.GET)
     @ResponseBody
     public ServerResponse selectPerson(@RequestParam(value = "id",defaultValue = "0") long id) {
-        Person person = personService.findPersonById(id);
+        User person = personService.findPersonById(id);
 
         String s = JSON.toJSONString(person);
         log.error("打印数据 = " + s);

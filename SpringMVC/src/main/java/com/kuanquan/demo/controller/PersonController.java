@@ -1,7 +1,7 @@
 package com.kuanquan.demo.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.kuanquan.demo.entity.Person;
+import com.kuanquan.demo.entity.User;
 import com.kuanquan.demo.service.PersonService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -41,7 +41,7 @@ public class PersonController {
         request.setCharacterEncoding("utf-8");
         response.setHeader("content-type", "text/html;charset=UTF-8");
         long personId = Long.parseLong(request.getParameter("id"));
-        Person person = personService.findPersonById(personId);
+        User person = personService.findPersonById(personId);
 
         String s = JSON.toJSONString(person);
         log.error("打印数据 = " + s);
@@ -109,7 +109,7 @@ public class PersonController {
         long personId = Long.parseLong(request.getParameter("id"));
         String name = request.getParameter("name");
         System.out.println("名称 = "+ name);
-        Person person = new Person();
+        User person = new User();
         person.setUser_id(personId);
         person.setName(name);
 //        person.setName("北京");
@@ -133,7 +133,7 @@ public class PersonController {
         response.setHeader("content-type", "text/html;charset=UTF-8");
         long personId = Long.parseLong(request.getParameter("id"));
 
-        Person person = new Person();
+        User person = new User();
         person.setUser_id(personId);
         person.setName("北京");
         person.set_timestamp("2018-08-24 14:44:14");

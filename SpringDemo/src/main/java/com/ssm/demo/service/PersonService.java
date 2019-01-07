@@ -1,16 +1,15 @@
-package com.kuanquan.demo.dao;
-import com.kuanquan.demo.entity.User;
-import org.springframework.stereotype.Repository;
+package com.ssm.demo.service;
 
-@Repository("personMapperDao")
-public interface PersonMapperDao {
+import com.ssm.demo.entity.User;
+
+public interface PersonService {
+
     /**
      * 根据id查找具体用户
      * @param id
      * @return
      */
     User findPersonById(long id);
-
     /**
      * 根据id查找用户名称
      * @param id
@@ -35,4 +34,5 @@ public interface PersonMapperDao {
      * @param person
      */
     void insertPerson(User person);
+
 }

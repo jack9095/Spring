@@ -1,16 +1,17 @@
-package com.kuanquan.demo.service.impl;
+package com.ssm.demo.service;
 
-import com.kuanquan.demo.dao.PersonMapperDao;
-import com.kuanquan.demo.entity.User;
-import com.kuanquan.demo.service.PersonService;
+import com.ssm.demo.dao.PersonMapperDao;
+import com.ssm.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("personServiceImpl")
+@Service
 public class PersonServiceImpl implements PersonService {
+
     @Autowired
     private PersonMapperDao personMapperDao;
 
+    @Override
     public User findPersonById(long id) {
         return personMapperDao.findPersonById(id);
     }
@@ -22,7 +23,6 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public void deletePerson(long id) {
-        System.out.println("删除一条记录 id = " + id);
         personMapperDao.deletePerson(id);
     }
 

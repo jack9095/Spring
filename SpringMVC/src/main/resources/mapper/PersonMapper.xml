@@ -17,12 +17,12 @@
     </delete>
 
     <!--更新单条记录-->
-    <update id="updataPerson" parameterType="com.kuanquan.demo.entity.Person">
+    <update id="updataPerson" parameterType="com.kuanquan.demo.entity.User">
         UPDATE user SET name = #{name} WHERE user_id = #{user_id}
     </update>
 
     <!--插入一条记录-->
-    <insert id="insertPerson" parameterType="com.kuanquan.demo.entity.Person">
+    <insert id="insertPerson" parameterType="com.kuanquan.demo.entity.User">
         insert into user(user_id,name,age,sex,create_time,_timestamp) values(#{user_id},#{name},#{age},#{sex},#{create_time},#{_timestamp})
     </insert>
 </mapper>
