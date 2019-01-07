@@ -16,7 +16,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="basice" target="1.7" />
+      <module name="basice" target="1.8" />
       <module name="Concurrency" target="1.8" />
       <module name="demo" target="1.7" />
       <module name="mybatis" target="1.7" />
