@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 设置为IUserDao接口方法提供sql语句配置 -->
-<mapper namespace="com.kuanquan.demo.dao.PersonMapperDao">
+<mapper namespace="com.ssm.demo.dao.UserMapperDao">
 
     <select id="findPersonById" resultType="User" parameterType="long">
         SELECT * FROM user WHERE user_id = #{id}
@@ -12,17 +12,16 @@
         SELECT name FROM user WHERE user_id = #{id}
     </select>
 
-    <delete id="deletePerson" parameterType="long" >
+    <delete id="deletePerson" parameterType="long">
         DELETE FROM user WHERE user_id = #{id}
     </delete>
 
-    <!--更新单条记录-->
-    <update id="updataPerson" parameterType="com.kuanquan.demo.entity.User">
+    <update id="updataPerson" parameterType="com.ssm.demo.entity.User">
         UPDATE user SET name = #{name} WHERE user_id = #{user_id}
     </update>
 
-    <!--插入一条记录-->
-    <insert id="insertPerson" parameterType="com.kuanquan.demo.entity.User">
-        insert into user(user_id,name,age,sex,create_time,_timestamp) values(#{user_id},#{name},#{age},#{sex},#{create_time},#{_timestamp})
+    <insert id="insertPerson" parameterType="com.ssm.demo.entity.User">
+        INSERT INTO user(user_id,name,age,sex,create_time,_timestamp) VALUES (#{user_id},#{name},#{age},#{sex},#{create_time},#{_timestamp})
     </insert>
+
 </mapper>

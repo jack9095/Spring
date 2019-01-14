@@ -2,7 +2,7 @@ package com.ssm.demo.service;
 
 import com.ssm.demo.entity.User;
 
-public interface PersonService {
+public interface UserService {
 
     /**
      * 根据id查找具体用户

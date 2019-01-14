@@ -3,7 +3,7 @@ package com.ssm.demo.controller;
 import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ssm.demo.entity.User;
-import com.ssm.demo.service.PersonService;
+import com.ssm.demo.service.UserService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,15 +17,15 @@ import java.io.IOException;
 
 @Controller
 @RequestMapping
-public class PersonController {
+public class UserController {
 
-    private Log log = LogFactory.getLog(PersonController.class);
+    private Log log = LogFactory.getLog(UserController.class);
 
     @Autowired
-    private PersonService personService;
+    private UserService personService;
 
     @RequestMapping(value = "/selectPerson",method = RequestMethod.GET)
-    public void selectPerson(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void selectUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.setCharacterEncoding("utf-8");
         response.setHeader("content-type", "text/html;charset=UTF-8");
         long personId = Long.parseLong(request.getParameter("id"));
@@ -38,6 +38,16 @@ public class PersonController {
 
 //        response.getWriter().write(mapper.writeValueAsString(person));
         response.getWriter().write(s);
+        response.getWriter().close();
+    }
+
+    @RequestMapping(value = "/delete",method = RequestMethod.GET)
+    public void deleteUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        request.setCharacterEncoding("utf-8");
+        response.setHeader("content-type", "text/html;charset=UTF-8");
+        long userId = Long.parseLong(request.getParameter("id"));
+        personService.deletePerson(userId);
+        response.getWriter().write("成功删除了");
         response.getWriter().close();
     }
 }

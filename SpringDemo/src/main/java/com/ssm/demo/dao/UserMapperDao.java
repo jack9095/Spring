@@ -4,7 +4,7 @@ import com.ssm.demo.entity.User;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PersonMapperDao {
+public interface UserMapperDao {
 
     /**
      * 根据id查找具体用户

@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="basice" />
         <module name="Concurrency" />
-        <module name="fly" />
         <module name="mybatis" />
         <module name="mybatis_generator" />
         <module name="OnlineRetailers" />

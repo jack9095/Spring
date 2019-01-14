@@ -1,15 +1,15 @@
 package com.ssm.demo.service;
 
-import com.ssm.demo.dao.PersonMapperDao;
+import com.ssm.demo.dao.UserMapperDao;
 import com.ssm.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PersonServiceImpl implements PersonService {
+public class UserServiceImpl implements UserService {
 
     @Autowired
-    private PersonMapperDao personMapperDao;
+    private UserMapperDao personMapperDao;
 
     @Override
     public User findPersonById(long id) {
